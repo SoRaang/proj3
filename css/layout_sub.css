@@ -1,0 +1,408 @@
+/* ---------- CWK Individual Layout CSS Ver. 202101 ---------- */
+
+/* ---------- 영역 공통 선언 시작 ---------- */
+
+body {
+    background: #e2e2e2;
+}
+
+section#subMainArea {
+    padding: 5rem .5rem;
+    min-height: 100vh;
+    border-left: .05rem solid rgba(0, 0, 0, .05);
+    border-right: .05rem solid rgba(0, 0, 0, .05);
+    background: #fff;
+    font-size: .7rem;
+    transition: .3s;
+}
+
+/* ---------- 영역 공통 선언 종료 ---------- */
+/* ---------- 컨텐츠 배경 시작 ---------- */
+
+div#subContentBG {
+    height: 20rem;
+    background: #2d2d2d;
+    background-size: cover;
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, .2);
+    transition: .3s;
+}
+
+div#subContentBG > div {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .75) 0%, rgba(0, 0, 0, 0) 50%);
+    backdrop-filter: blur(.5rem) brightness(.5);
+}
+
+div#subContentBG > div > div.int_wrap {
+    position: relative;
+    padding: 0 1.5rem;
+    height: 100%;
+}
+
+p.sub_information {
+    position: absolute;
+    bottom: 1.5rem;
+    left: calc(25% + 2rem);
+    font-size: .7rem;
+    color: rgba(255, 255, 255, .7);
+    text-shadow: .05rem .05rem .1rem rgba(0, 0, 0, .3);
+    word-spacing: .5rem;
+}
+
+/* ---------- 컨텐츠 배경 종료 ---------- */
+/* ---------- 컨텐츠 영역 시작 ---------- */
+
+section#subMainArea.content_container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+aside#contentSideBar {
+    position: relative;
+    width: 25%;
+    height: 100%;
+}
+
+/* ---------- 컨텐츠 영역 종료 ---------- */
+/* ---------- 사이드바 영역 시작 ---------- */
+
+img.cover_content {
+    margin: -5rem 0 1rem 0;
+    padding: .15rem;
+    width: 100%;
+    border-radius: .25rem;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, .2);
+    object-fit: cover;
+}
+
+/* ---------- 사이드바 영역 종료 ---------- */
+/* ---------- 컨텐츠 내용 시작 ---------- */
+
+article#subContent {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    width: calc(75% - 1.5rem);
+}
+
+div.subtitle_box {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0 .75rem;
+}
+
+div.subtitle_box > * {
+    margin: auto 0;
+}
+
+h2.subtitle {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+p.subtitle_en {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, .5);
+    line-height: 2rem;
+}
+
+p.sub_author {
+    margin-top: .5rem;
+    width: 100%;
+    font-size: .8rem;
+    color: rgba(0, 0, 0, .5);
+}
+
+div#subButtons {
+    display: flex;
+    align-content: center;
+    gap: .5rem;
+    position: relative;
+}
+
+div#subButtons > * {
+    padding: .5rem 1rem;
+    border-radius: .15rem;
+    font-size: .7rem;
+}
+
+button#subWrite {
+    background: royalblue;
+    color: rgba(255, 255, 255, .7);
+}
+
+button#subAdd {
+    background: rgba(111, 245, 206, 1);
+    color: rgba(0, 0, 0, .5);
+}
+
+button#subMore {
+    position: relative;
+    padding: 0;
+    aspect-ratio: 1 / 1;
+    width: 1.8rem;
+    background: gold;
+    color: rgba(0, 0, 0, .5);
+}
+
+button#subMore::before,
+button#subMore::after {
+    position: absolute;
+    border-radius: .1rem;
+    background: rgba(255, 0, 0, .5);
+    content: '';
+}
+
+button#subMore::before {
+    top: calc(50% - .1rem);
+    left: calc(50% - .4rem);
+    width: .8rem;
+    height: .2rem;
+}
+
+button#subMore::after {
+    top: calc(50% - .4rem);
+    left: calc(50% - .1rem);
+    width: .2rem;
+    height: .8rem;
+}
+
+article#subContent > hr.hf {
+    background: rgba(0, 0, 0, .1);
+}
+
+div#subText {
+    display: flex;
+    flex-flow: row wrap;
+    gap: .5rem;
+    padding: 0 .5rem;
+    font-size: .7rem;
+    color: rgba(0, 0, 0, .9);
+    line-height: 1.1rem;
+    text-indent: .25rem;
+    text-shadow: .05rem .05rem .05rem rgba(0, 0, 0, .2);
+}
+
+/* ---------- 컨텐츠 내용 종료 ---------- */
+/* ---------- 컨텐츠 추가영역 시작 ---------- */
+
+div#subAddition {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+}
+
+div#subAddition > * {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .75rem;
+    flex: 1 1 calc(50% - .5rem);
+}
+
+h3.subadd_title {
+    width: 100%;
+    text-align: center;
+}
+
+/* ---------- 컨텐츠 추가영역 종료 ---------- */
+/* ---------- 컨텐츠 코멘트 시작 ---------- */
+
+div.subadd_comment > ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .25rem;
+}
+
+div.subadd_comment > ul > li {
+    position: relative;
+    padding: .5rem .5rem .5rem 3.5rem;
+    border: .05rem solid #ccc;
+    border-radius: .25rem;
+    line-height: 1.5;
+    transition: .3s;
+}
+
+img.subadd_comment_face {
+    position: absolute;
+    top: calc(50% - 1.25rem);
+    left: .5rem;
+    aspect-ratio: 1 / 1;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+form#subComment {
+    display: flex;
+    gap: .25rem;
+}
+
+input#subCommentText {
+    padding: 0 .5rem;
+    width: calc(100% - 3.5rem);
+    height: 1.5rem;
+    border: .05rem solid rgba(0, 0, 0, .15);
+    border-radius: .15rem;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .05);
+    outline: none;
+    color: rgba(0, 0, 0, .7);
+}
+
+button#subCommentSubmit {
+    flex-grow: 1;
+    height: 1.5rem;
+    border-radius: .15rem;
+    background: rgba(111, 245, 206, 1);
+    color: rgba(0, 0, 0, .5);
+}
+
+/* ---------- 컨텐츠 코멘트 종료 ---------- */
+/* ---------- 컨텐츠 모글리 리뷰 시작 ---------- */
+
+article.subadd_prorv_article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 1rem .5rem;
+    position: relative;
+    padding: .5rem .5rem 2.5rem .5rem;
+    height: 100%;
+    border: .05rem solid rgba(0, 0, 0, .15);
+    border-radius: .15rem;
+    box-sizing: border-box;
+}
+
+img.subadd_prorv_face {
+    flex: 0 0 2.5rem;
+    aspect-ratio: 1 / 1;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+p.subadd_prorv_title {
+    margin: auto 0;
+    width: calc(100% - 3rem);
+    font-size: .8rem;
+}
+
+p.subadd_prorv_title > span.txtnorm {
+    font-size: .6rem;
+    color: rgba(0, 0, 0, .5);
+}
+
+p.subadd_prorv_text {
+    width: 100%;
+    max-height: 9rem;
+    line-height: 1rem;
+    overflow-y: scroll;
+}
+
+div.subadd_prorv_btncontainer {
+    display: flex;
+    gap: .25rem;
+    position: absolute;
+    bottom: .5rem;
+    right: .5rem;
+}
+
+button.btnNice,
+button.btnHate {
+    padding: .35rem .75rem;
+    border-radius: .15rem;
+    background: #ccc;
+}
+
+/* ---------- 컨텐츠 모글리 리뷰 종료 ---------- */
+/* ---------- 컨텐츠가 포함된 컬렉션 시작 ---------- */
+
+div#subCollection {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+}
+
+article.collection_windows {
+    border-radius: .25rem;
+    transition: .2s;
+}
+
+article.collection_windows:hover {
+    background: #fff;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, .2);
+}
+
+article.collection_windows > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+div.collection_items {
+    display: flex;
+    flex-flow: row wrap;
+    gap: .15rem;
+    padding: .15rem;
+    border-radius: .25rem;
+    background: rgba(0, 0, 0, .3);
+}
+
+div.collection_items > * {
+    flex: 1 1 calc(100% / 3);
+    aspect-ratio: 1 / 1.5;
+    max-width: calc((100% - .3rem) / 3);
+    border-radius: .1rem;
+    object-fit: cover;
+    opacity: .6;
+    transition: .2s;
+    z-index: 1;
+}
+
+article.collection_windows:hover div.collection_items {
+    background: transparent;
+}
+
+div.collection_items *:hover {
+    box-shadow: 0 0 0 .15rem rgba(0, 0, 0, .3), 0 .15rem .25rem rgba(0, 0, 0, .2);
+    opacity: 1;
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+dl.collection_owner {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: flex-start;
+    margin: .5rem;
+    height: 2.5rem;
+}
+
+dl.collection_owner > img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+dl.collection_owner > dt,
+dl.collection_owner > dd {
+    margin-left: .75rem;
+    width: calc(100% - 3.25rem);
+    line-height: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+dl.collection_owner > dd {
+    font-size: .6rem;
+    color: rgba(0, 0, 0, .5);
+}
+
+/* ---------- 컨텐츠가 포함된 컬렉션 종료 ---------- */

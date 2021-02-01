@@ -1,0 +1,592 @@
+/* ---------- CWK Individual Layout CSS Ver. 202101 ---------- */
+
+/* ---------- 영역 공통 선언 시작 ---------- */
+
+section[box-type="content"] {
+    padding: 2.5rem 0;
+    font-size: .7rem;
+}
+
+section:last-of-type {
+    margin-bottom: 2.5rem;
+}
+
+h2.secTitle {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #2f4946;
+    text-shadow: .05rem .05rem .05rem rgba(25, 214, 120, .2);
+}
+
+h2.inverted {
+    color: rgba(255, 255, 255, .8);
+    text-shadow: .05rem .05rem .05rem rgba(214, 25, 120, .2);
+}
+
+/* ---------- 영역 공통 선언 종료 ---------- */
+/* ---------- 메인 슬라이더 시작 ---------- */
+
+section#slideIndex {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    height: 25rem;
+    background: #2d2d2d;
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, .2);
+    outline: .05rem solid rgba(0, 0, 0, .2);
+    cursor: grab;
+}
+
+section#slideIndex:active {
+    cursor: grabbing;
+}
+
+article.mainslide-item {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+div.mainslide-backdrop {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .75) 0%, rgba(0, 0, 0, 0) 50%);
+    backdrop-filter: blur(.5rem) brightness(.5);
+    overflow: hidden;
+}
+
+div.mainslide-backdrop > div.int_wrap {
+    position: relative;
+    width: 100%;
+    height: 25rem;
+}
+
+img.mainslide-img {
+    position: absolute;
+    top: 5%;
+    right: 2rem;
+    width: 15rem;
+    height: 21rem;
+    border-radius: .75rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, .5);
+    object-fit: cover;
+    transform: translateY(20%);
+}
+
+dl.mainslide-desc {
+    position: absolute;
+    top: 25%;
+    left: 5rem;
+    display: flex;
+    flex-flow: column wrap;
+    gap: .75rem;
+    color: #fff;
+    z-index: 2;
+}
+
+dt.itemdesc_title {
+    font-size: 2rem;
+    opacity: 0;
+}
+
+dd.itemdesc_desc {
+    font-size: .8rem;
+    line-height: 1rem;
+    opacity: 0;
+}
+
+dd.itemdesc_star {
+    opacity: 0;
+}
+
+button.mainslide-more {
+    position: relative;
+    margin-top: 1.5rem;
+    padding: .65rem 2rem;
+    width: max-content;
+    border: .15rem solid rgba(255, 255, 255, .7);
+    border-radius: .2rem;
+    box-sizing: content-box;
+    background: rgba(255, 255, 255, .2);
+    color: rgba(255, 255, 255, .7);
+    transition: .3s;
+}
+
+button.mainslide-more:hover {
+    border: .15rem solid #fff;
+    color: rgba(16, 167, 114, 1);
+}
+
+button.mainslide-more::before {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    opacity: 0;
+    transition: .3s;
+    z-index: -1;
+    content: '';
+}
+
+button.mainslide-more:hover::before {
+    left: 0;
+    width: 100%;
+    opacity: 1;
+}
+
+p.mainslide-tag {
+    display: flex;
+    gap: .75rem;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 2rem;
+}
+
+p.mainslide-tag > span {
+    display: block;
+    padding: .4rem 1rem;
+    border-radius: .75rem;
+    box-shadow: 0 .15rem .25rem rgba(0, 0, 0, .2);
+    font-size: .7rem;
+    color: rgba(0, 0, 0, .65);
+}
+
+span.tag_category {
+    background: rgba(111, 245, 206, 1);
+    color: rgba(0, 0, 0, .5);
+    font-weight: bolder;
+}
+
+span.tag_genre {
+    background: #c9f0d4;
+}
+
+span.tag_kind1 {
+    background: #c9f0d4;
+}
+
+span.tag_kind2 {
+    background: #c9f0d4;
+}
+
+/* ---------- 메인 슬라이더 종료 ---------- */
+/* ---------- 최근 화제작 영역 시작 ---------- */
+
+section#secFeatured > div.int_wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    gap: 1.5rem;
+}
+
+article.item_content {
+    flex: 1 0 18.5rem;
+    padding: .75rem;
+    min-height: 10rem;
+    border-radius: .75rem;
+    box-sizing: border-box;
+    background: #ccc;
+    overflow: hidden;
+}
+
+/* ---------- 최근 화제작 영역 종료 ---------- */
+/* ---------- 일반 리스트 영역 시작 ---------- */
+
+div.slide-list {
+    position: relative;
+    padding: 0;
+}
+
+article.item_single {
+    position: relative;
+    margin: 0 .5rem;
+    height: 14.5rem;
+    transition: .3s;
+}
+
+article.item_single.ranked::before {
+    display: block;
+    position: absolute;
+    top: .3rem;
+    right: .3rem;
+    padding: .35rem;
+    border-radius: .15rem;
+    background: rgba(0, 0, 0, .8);
+    font-family: 'Miriam Libre Bold', sans-serif;
+    font-size: .9rem;
+    color: #fff;
+    font-weight: bolder;
+    z-index: 3;
+    content: '#'attr(rank-data);
+}
+
+article.item_single.ranked:first-of-type::before {
+    background: rgba(240, 59, 24, .8);
+    color: #f0da23;
+}
+
+article.item_single.ranked:nth-of-type(2)::before {
+    background: rgba(20, 123, 240, .8);
+    color: #e1e1e1;
+}
+
+article.item_single.ranked:nth-of-type(3)::before {
+    background: rgba(240, 180, 31, .8);
+    color: #333;
+}
+
+div.single_int {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .5rem;
+    position: relative;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+img.single_cover {
+    margin: 0 auto;
+    width: 100%;
+    height: 12rem;
+    border-radius: .25rem;
+    object-fit: cover;
+}
+
+dl.single_desc {
+    width: 100%;
+    line-height: 1rem;
+}
+
+dl.single_desc.inverted {
+    color: rgba(255, 255, 255, .8);
+}
+
+dt.singledesc_title {
+    font-size: .8rem;
+}
+
+dd.singledesc_desc {
+    font-size: .7rem;
+    opacity: .5;
+}
+
+p.single_info {
+    display: none;
+    line-height: 1rem;
+    text-align: center;
+}
+
+p.single_info > * {
+    display: block;
+}
+
+div.single_buttons {
+    display: none;
+    justify-content: center;
+    gap: .25rem;
+    margin-top: auto;
+}
+
+div.single_buttons > * {
+    flex: 1 1 50%;
+    padding: .35rem;
+    border-radius: .15rem;
+    box-sizing: border-box;
+    background: #ccc;
+}
+
+div.single_buttons > *:hover {
+    background: rgba(111, 245, 206, 1);
+    color: rgba(0, 0, 0, .5);
+    font-weight: bolder;
+}
+
+article.item_single.slick-active:hover > div.single_int {
+    top: -10%;
+    left: -20%;
+    padding: .75rem;
+    width: 140%;
+    height: 130%;
+    border-radius: .5rem;
+    background: #fff;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, .2);
+    z-index: 10;
+}
+
+article.item_single.slick-active:hover img.single_cover {
+    width: 8rem;
+    height: 10rem;
+    box-shadow: 0 .3rem .75rem rgba(0, 0, 0, .3);
+}
+
+article.item_single.slick-active:hover dl.single_desc {
+    color: initial;
+    text-align: center;
+}
+
+article.item_single.slick-active:hover p.single_info {
+    display: block;
+}
+
+article.item_single.slick-active:hover div.single_buttons {
+    display: flex;
+}
+
+/* ---------- 일반 리스트 영역 종료 ---------- */
+/* ---------- 스폰서 배너 시작 ---------- */
+
+div#bannerSponsor {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 6rem;
+    background: rgba(0, 0, 0, .1);
+    outline: .05rem solid rgba(0, 0, 0, .2);
+}
+
+div#bannerSponsor > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------- 스폰서 배너 종료 ---------- */
+/* ---------- 모글 기획전 시작 ---------- */
+
+article.mogle_article {
+    position: relative;
+    padding: .75rem;
+    min-height: 15rem;
+    border-radius: .75rem;
+    box-sizing: border-box;
+    background: #2d2d2d;
+}
+
+article.mogle_article::before {
+    position: absolute;
+    top: .75rem;
+    left: .75rem;
+    font-family: 'IBM Plex Sans KR Medium', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, .6);
+    text-shadow: .05rem .05rem .05rem rgba(0, 0, 0, .5);
+    content: attr(article-theme);
+}
+
+/* ---------- 모글 기획전 종료 ---------- */
+/* ---------- 전문가 리뷰 시작 ---------- */
+
+section#secProReview > div.int_wrap {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+}
+
+article.mogle_pick {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: .5rem 1.5rem;
+    flex: 1 1 calc(50% - .5rem);
+    position: relative;
+    border-radius: .75rem;
+    background: #e2e2e2;
+}
+
+img.pick_profile {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 .5rem #fff;
+}
+
+dl.pick_desc {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: .25rem;
+    margin-top: .5rem;
+    width: calc(100% - 6rem);
+    height: 3.5rem;
+    border-bottom: .05rem dashed rgba(0, 0, 0, .3);
+    font-size: .7rem;
+    line-height: 1rem;
+}
+
+dt.pickdesc_title {
+    font-size: 1.2rem;
+}
+
+dt.pickdesc_title::before {
+    content: '"';
+}
+
+dt.pickdesc_title::after {
+    content: '"';
+}
+
+dd.pickdesc_desc {
+    color: rgba(0, 0, 0, .5);
+}
+
+p.pick_content {
+    margin: 0 1rem;
+    padding: 0 .5rem 1rem .5rem;
+    width: 100%;
+    height: 5.5rem;
+    border-bottom: .05rem solid rgba(0, 0, 0, .1);
+    font-size: .7rem;
+    line-height: 1.1rem;
+    text-indent: .25rem;
+    text-shadow: .05rem .05rem .1rem rgba(0, 0, 0, .2);
+    overflow-y: auto;
+}
+
+div.pick_control::before {
+    display: block;
+    position: absolute;
+    bottom: calc(100% + .55rem);
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(0deg, rgba(226, 226, 226, 1) 20%, rgba(226, 226, 226, 0) 100%);
+    pointer-events: none;
+    content: '';
+}
+
+div.pick_control {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    gap: .5rem;
+    position: relative;
+    margin-bottom: .5rem;
+    padding: 0 .5rem;
+    width: 100%;
+}
+
+div.pick_control > * {
+    margin: auto 0;
+    border-radius: .25rem;
+}
+
+div.pick_control > img {
+    width: 2rem;
+    height: 2rem;
+    box-shadow: 0 0 0 .1rem rgba(0, 0, 0, .1);
+    object-fit: cover;
+}
+
+div.pick_control > p {
+    flex: 1 0 10rem;
+    margin-right: auto;
+}
+
+div.pick_control > button {
+    flex: 1 1 auto;
+    padding: .65rem 1rem;
+    background: #ccc;
+    transition: .3s;
+}
+
+div.pick_control > button:hover {
+    background: rgba(111, 245, 206, 1);
+    color: rgba(0, 0, 0, .5);
+    font-weight: bolder;
+}
+
+/* ---------- 전문가 리뷰 종료 ---------- */
+/* ---------- 컬렉션 시작 ---------- */
+
+section#secCollection > div.int_wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+}
+
+article.collection_windows {
+    border-radius: .25rem;
+    transition: .2s;
+}
+
+article.collection_windows:hover {
+    background: #fff;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, .2);
+}
+
+article.collection_windows > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+div.collection_items {
+    display: flex;
+    flex-flow: row wrap;
+    gap: .15rem;
+    padding: .15rem;
+    border-radius: .25rem;
+    background: rgba(0, 0, 0, .3);
+}
+
+div.collection_items > * {
+    flex: 1 1 calc(100% / 3);
+    aspect-ratio: 1 / 1.5;
+    max-width: calc((100% - .3rem) / 3);
+    border-radius: .1rem;
+    object-fit: cover;
+    opacity: .6;
+    transition: .2s;
+    z-index: 1;
+}
+
+article.collection_windows:hover div.collection_items {
+    background: transparent;
+}
+
+div.collection_items *:hover {
+    box-shadow: 0 0 0 .15rem rgba(0, 0, 0, .3), 0 .15rem .25rem rgba(0, 0, 0, .2);
+    opacity: 1;
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+dl.collection_owner {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: flex-start;
+    margin: .5rem;
+    height: 2.5rem;
+}
+
+dl.collection_owner > img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+dl.collection_owner > dt,
+dl.collection_owner > dd {
+    margin-left: .75rem;
+    width: calc(100% - 3.25rem);
+    line-height: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+dl.collection_owner > dd {
+    font-size: .6rem;
+    color: rgba(0, 0, 0, .5);
+}
+
+/* ---------- 컬렉션 종료 ---------- */

@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <!-- 최소/최대 스케일 1x, 확대/축소 불가 -->
+
+        <title>세상의 모든 글, 모글</title>
+        <link rel="shortcut icon" href="./images/icons/favicon.ico" />
+
+        <link rel="stylesheet" type="text/css" href="./css/normalize.css" /> <!-- 브라우저별 태그 형태 통일 -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> <!-- Slick Carousel -->
+        <link rel="stylesheet" type="text/css" href="./css/default.css" /> <!-- 공통 CSS -->
+        <link rel="stylesheet" type="text/css" href="./css/layout_index.css" /> <!-- 개별 페이지 CSS -->
+
+        <!-- 모듈 CSS -->
+        <link rel="stylesheet" type="text/css" href="./css/header.css" />
+        <link rel="stylesheet" type="text/css" href="./css/footer.css" />
+        <link rel="stylesheet" type="text/css" href="./css/interface.css" /> <!-- 인터페이스 구성요소 CSS -->
+        <link rel="stylesheet" type="text/css" href="./css/mq.css" /> <!-- 미디어 쿼리 CSS -->
+        <link rel="stylesheet" type="text/css" href="./css/animation.css" /> <!-- 애니메이션 키프레임 CSS -->
+        <link rel="stylesheet" type="text/css" href="./css/carousel.css" /> <!-- 공통 슬라이드 CSS -->
+
+        <!-- JavaScript -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- jQuery -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> <!-- Slick -->
+        <script type="text/javascript" src="./js/default.js"></script> <!-- 공통 JS -->
+        <script type="text/javascript" src="./js/interface.js"></script> <!-- 인터페이스 구성요소 JS -->
+        <script type="text/javascript" src="./js/js_index.js"></script> <!-- 개별 페이지 JS -->
+
+        <!--[if lt IE 9]>
+            <script src="./js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body> <!-- CWK Normal HTML Ver. 202101 -->
+        <div id="wrap">
+
+    <!-- Non-Related -->
+
+            <aside id="gotoTop">
+                <button class="go" onclick="location.href='#wrap'">go to top</button>
+            </aside>
+
+            <aside id="popSplash">
+                <h2 id="popTitle">알림</h2>
+                <p id="splashText">
+                    현재 보고 계시는 웹 페이지는 2021년 프론트엔드 디자인 교육과정을 이수한 포트폴리오 저작물로서 불법 복제는 불가하며,
+                    사용된 이미지는 무료 이미지 및 레퍼런스 업체의 이미지 등을 편집하여 사용하였으므로 저작권은 해당 업체 및 이미지의 원 저작자에게 있음을 알려드립니다.<br />
+                    문제의 소지가 있을 시에는 <a class="txtenbold" href="mailto:dsc0320@hotmail.com">dsc0320@hotmail.com</a> 으로 연락 주시기 바랍니다.
+                </p>
+                <button id="splashClose" class="txtbold">닫기</button>
+            </aside>
+
+            <nav id="navMobile">
+                <p class="mnav_cate" btn-name="카테고리">
+                    <a href="#"><img src="images/icons/icoCate.png" alt="" /></a>
+                </p>
+                <p class="mnav_comm" btn-name="커뮤니티">
+                    <a href="./sub1_2.html"><img src="images/icons/icoComm.png" alt="" /></a>
+                </p>
+                <p class="mnav_home" btn-name="홈">
+                    <a href="./index.html"><img src="images/icons/icoHome.png" alt="" /></a>
+                </p>
+                <p class="mnav_my" btn-name="나의 서재">
+                    <a href="#"><img src="images/icons/icoShelf.png" alt="" /></a>
+                </p>
+                <p class="mnav_acc" btn-name="정보수정">
+                    <a href="#"><img src="images/icons/icoSetting.png" alt="" /></a>
+                </p>
+            </nav>
+
+    <!-- Non-Related -->
+
+            <header id="headBase" class="head_index">
+                <div class="int_wrap">
+                    <h1 class="logo scr_alt"><a href="./index.html" target="_self">Mogle</a></h1>
+                    <nav id="navMain" class="nav_index txtbold">
+                        <a href="#"><span>화제작 모아보기</span></a>
+                        <a class="nav_checked" href="#"><span>도서</span></a>
+                        <a href="#"><span>영화 / 연극 / 뮤지컬</span></a>
+                        <a href="#"><span>TV 프로그램</span></a>
+                        <a class="thisitem" href="./sub1_2.html"><span>커뮤니티</span></a>
+                    </nav>
+                    <form id="frmHSearch" class="frmsearch_index">
+                        <input id="txtHSearch" type="text" name="headSearch" maxlength="60" placeholder="검색 키워드를 입력하세요." />
+                    </form>
+                    <button id="btnMyMenu" class="btn_index txtbold">나의 서재</button>
+                    <button id="btnProfile" class="btn_index"><img src="./images/profile_img.jpg" alt="프로필 보기" /></button>
+
+                    <div id="floatAcc">
+                        <h4>로그인이 필요한 서비스입니다.</h4>
+                        <hr class="hf" />
+                        <input id="txtID" type="email" name="loginID" maxlength="50" placeholder="ID (e-mail 주소)" value="richter@belmont.com" />
+                        <input id="txtPW" type="password" name="loginPW" maxlength="20" placeholder="비밀번호" value="1234567891011" />
+                        <button id="btnLogin" type="submit">로그인</button>
+                        <button id="btnJoin">회원가입</button>
+                        <button id="btnFind">ID / 비밀번호 찾기</button>
+                    </div>
+                </div>
+            </header> <!-- Header -->
+
+            <section id="slideIndex" class="slide-main"> <!-- 최근 추가된 컨텐츠 소개 -->
+                <article class="mainslide-item">
+                    <div class="mainslide-backdrop">
+                        <div class="int_wrap">
+                            <dl class="mainslide-desc">
+                                <dd class="itemdesc_desc">
+                                    어스시 연대기의 첫 번째 작품<br />
+                                    정통 판타지 소설의 조상님
+                                </dd>
+                                <dt class="itemdesc_title txtbold">
+                                    어스시의 마법사
+                                </dt>
+                                <dd class="itemdesc_star">
+                                    <span style="color: rgb(255, 174, 0);">★</span> 평균 8.8점
+                                </dd>
+                                <button class="mainslide-more txtbold thisitem" onclick="location.href='./sub1_1.html'">자세히 보기</button>
+                            </dl>
+                            <img class="mainslide-img" src="./images/bookcovers/14.jpg" alt="어스시의 마법사" />
+                            <p class="mainslide-tag">
+                                <span class="tag_category">소설</span>
+                                <span class="tag_genre">#판타지</span>
+                                <span class="tag_kind1">#고전</span>
+                                <span class="tag_kind2">#게드전기</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <!-- 0 - Sub Page Exists -->
+                <article class="mainslide-item">
+                    <div class="mainslide-backdrop">
+                        <div class="int_wrap">
+                            <dl class="mainslide-desc">
+                                <dd class="itemdesc_desc">
+                                    주문하신 꿈은 매진입니다<br />
+                                    잠들어야 입장할 수 있는 신비한 마을
+                                </dd>
+                                <dt class="itemdesc_title txtbold">
+                                    달러구트 꿈 백화점
+                                </dt>
+                                <dd class="itemdesc_star">
+                                    <span style="color: rgb(255, 174, 0);">★</span> 평균 8.1점
+                                </dd>
+                                <button class="mainslide-more txtbold">자세히 보기</button>
+                            </dl>
+                            <img class="mainslide-img" src="./images/bookcovers/01.jpg" alt="달러구트 꿈 백화점" />
+                            <p class="mainslide-tag">
+                                <span class="tag_category">소설</span>
+                                <span class="tag_genre">#판타지</span>
+                                <span class="tag_kind1">#감상적</span>
+                                <span class="tag_kind2">#따뜻한</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <!-- 1 -->
+                <article class="mainslide-item">
+                    <div class="mainslide-backdrop">
+                        <div class="int_wrap">
+                            <dl class="mainslide-desc">
+                                <dd class="itemdesc_desc">
+                                    너는 마법사란다, 해리<br />
+                                    해리 포터의 첫 번째 모험담
+                                </dd>
+                                <dt class="itemdesc_title txtbold">
+                                    해리 포터와 마법사의 돌
+                                </dt>
+                                <dd class="itemdesc_star">
+                                    <span style="color: rgb(255, 174, 0);">★</span> 평균 7.1점
+                                </dd>
+                                <button class="mainslide-more txtbold">자세히 보기</button>
+                            </dl>
+                            <img class="mainslide-img" src="./images/bookcovers/02.jpg" alt="해리 포터와 마법사의 돌" />
+                            <p class="mainslide-tag">
+                                <span class="tag_category">소설</span>
+                                <span class="tag_genre">#판타지</span>
+                                <span class="tag_kind1">#마법</span>
+                                <span class="tag_kind2">#청소년</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <!-- 2 -->
+                <article class="mainslide-item">
+                    <div class="mainslide-backdrop">
+                        <div class="int_wrap">
+                            <dl class="mainslide-desc">
+                                <dd class="itemdesc_desc">
+                                    양치기 청년의 자아찾기<br />
+                                    세상에서 가장 사랑받는 작가 파울로 코엘료
+                                </dd>
+                                <dt class="itemdesc_title txtbold">
+                                    연금술사
+                                </dt>
+                                <dd class="itemdesc_star">
+                                    <span style="color: rgb(255, 174, 0);">★</span> 평균 6.3점
+                                </dd>
+                                <button class="mainslide-more txtbold">자세히 보기</button>
+                            </dl>
+                            <img class="mainslide-img" src="./images/bookcovers/03.jpg" alt="연금술사" />
+                            <p class="mainslide-tag">
+                                <span class="tag_category">소설</span>
+                                <span class="tag_genre">#동화같은</span>
+                                <span class="tag_kind1">#자아찾기</span>
+                                <span class="tag_kind2">#호불호가 갈리는</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <!-- 3 -->
+            </section> <!-- slideIndex -->
+
+    <!-- Page Main Contents Start -->
+
+            <section id="secFeatured" box-type="content">
+                <h2 class="secTitle int_wrap txtbold">최근 화제작 - 도서</h2>
+                <div class="int_wrap">
+                    <article class="item_content">
+                        최근 400여개 이상의 리뷰를 받은 화제의 신작
+                    </article>
+                    <!-- 1 -->
+                    <article class="item_content">
+                        구관이 명관! 10년 이상 스테디셀러를 기록한 작품
+                    </article>
+                    <!-- 2 -->
+                    <article class="item_content">
+                        최근 한 달 사이 가장 많이 팔린 작품
+                    </article>
+                    <!-- 3 -->
+                </div>
+            </section> <!-- secFeatured -->
+
+            <section id="secBestSeller" box-type="content">
+                <h2 class="secTitle int_wrap txtbold">베스트셀러</h2>
+                <div class="slide-list int_wrap">
+                    <article class="item_single ranked" rank-data="1">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/04.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 1 -->
+                    <article class="item_single ranked" rank-data="2">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/05.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 2 -->
+                    <article class="item_single ranked" rank-data="3">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/06.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 3 -->
+                    <article class="item_single ranked" rank-data="4">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/07.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 4 -->
+                    <article class="item_single ranked" rank-data="5">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/08.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 5 -->
+                    <article class="item_single ranked" rank-data="6">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/09.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 6 -->
+                    <article class="item_single ranked" rank-data="7">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/10.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 7 -->
+                    <article class="item_single ranked" rank-data="8">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/11.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 8 -->
+                    <article class="item_single ranked" rank-data="9">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/12.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 9 -->
+                    <article class="item_single ranked" rank-data="10">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/13.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 10 -->
+                    <article class="item_single ranked" rank-data="11">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/14.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 11 -->
+                    <article class="item_single ranked" rank-data="12">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/15.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 12 -->
+                </div>
+            </section> <!-- secBestSeller -->
+
+            <section id="secArticles" box-type="content">
+                <h2 class="secTitle int_wrap txtbold">모글 기획전</h2>
+                <div class="int_wrap">
+                    <article class="mogle_article" article-theme="호러 · 스티븐 킹">
+
+                    </article>
+                </div>
+            </section> <!-- secArticles -->
+
+            <section id="secProReview" box-type="content">
+                <h2 class="secTitle int_wrap txtbold">모글리's Pick</h2>
+                <div class="int_wrap">
+                    <article class="mogle_pick">
+                        <img class="pick_profile" src="./images/faces/f05.jpg" alt="" />
+                        <dl class="pick_desc">
+                            <dt class="pickdesc_title txtbold">
+                                가나다 123 abc
+                            </dt>
+                            <dd class="pickdesc_desc">
+                                누구 · 어디 소속
+                            </dd>
+                        </dl>
+                        <p class="pick_content">
+                            Sed dapibus est a sem pharetra, nec scelerisque urna interdum. Cras et elit libero. In non nibh pretium, dapibus quam id, efficitur velit. In aliquet magna bibendum gravida molestie. Ut purus eros, ornare vel iaculis id, efficitur vel risus. Phasellus cursus ut felis id porta. Mauris sit amet felis diam. In ac eros nisi. Pellentesque id lectus nisi.
+                        </p>
+                        <div class="pick_control">
+                            <img src="./images/bookcovers/17.jpg" alt="" />
+                            <p><span class="txtbold">책 제목</span> · 저자</p>
+                            <button>따봉</button>
+                            <button>나의 서재로</button>
+                        </div>
+                    </article>
+                    <!-- 1 -->
+                    <article class="mogle_pick">
+                        <img class="pick_profile" src="./images/faces/f01.jpg" alt="" />
+                        <dl class="pick_desc">
+                            <dt class="pickdesc_title txtbold">
+                                가나다 123 abc
+                            </dt>
+                            <dd class="pickdesc_desc">
+                                누구 · 어디 소속
+                            </dd>
+                        </dl>
+                        <p class="pick_content">
+                            Pellentesque sed risus blandit, ullamcorper nisl vel, mattis leo. Fusce mollis in odio et ultrices. Nulla facilisi. Vestibulum eget convallis erat, sed euismod arcu. Fusce elementum, eros tristique mollis gravida, nisl ex gravida neque, sit amet vehicula diam sapien feugiat nulla. Vivamus nec lacus lorem. Sed nisi tellus, hendrerit eu elit eget, rhoncus lobortis sapien. Nam vel magna convallis, consequat odio nec, convallis lacus. Integer suscipit tellus dolor, quis ultrices felis consequat nec. Fusce lacinia diam fringilla porttitor fringilla. Duis congue nisl mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce tincidunt, felis vitae congue accumsan, tellus risus pharetra augue, ut mollis lorem ex et libero. Mauris dictum libero pretium, dignissim sem sit amet, interdum massa. Quisque at arcu vitae ligula dapibus tristique et vitae velit.
+                        </p>
+                        <div class="pick_control">
+                            <img src="./images/bookcovers/14.jpg" alt="" />
+                            <p><span class="txtbold">책 제목</span> · 저자</p>
+                            <button>따봉</button>
+                            <button>나의 서재로</button>
+                        </div>
+                    </article>
+                    <!-- 2 -->
+                    <article class="mogle_pick">
+                        <img class="pick_profile" src="./images/faces/f07.jpg" alt="" />
+                        <dl class="pick_desc">
+                            <dt class="pickdesc_title txtbold">
+                                가나다 123 abc
+                            </dt>
+                            <dd class="pickdesc_desc">
+                                누구 · 어디 소속
+                            </dd>
+                        </dl>
+                        <p class="pick_content">
+                            Aenean sit amet orci sapien. Sed congue gravida ligula eu fringilla. In hac habitasse platea dictumst. Maecenas viverra venenatis eros sit amet pulvinar. Integer pharetra aliquam lectus, eget ornare velit tristique quis. Quisque laoreet leo sed aliquet faucibus. Praesent et ornare odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+                        </p>
+                        <div class="pick_control">
+                            <img src="./images/bookcovers/05.jpg" alt="" />
+                            <p><span class="txtbold">책 제목</span> · 저자</p>
+                            <button>따봉</button>
+                            <button>나의 서재로</button>
+                        </div>
+                    </article>
+                    <!-- 3 -->
+                    <article class="mogle_pick">
+                        <img class="pick_profile" src="./images/faces/f03.jpg" alt="" />
+                        <dl class="pick_desc">
+                            <dt class="pickdesc_title txtbold">
+                                가나다 123 abc
+                            </dt>
+                            <dd class="pickdesc_desc">
+                                누구 · 어디 소속
+                            </dd>
+                        </dl>
+                        <p class="pick_content">
+                            Donec vitae turpis lorem. Proin ornare, metus nec dignissim elementum, diam justo placerat nisi, vel varius risus turpis sit amet nunc. Aenean in purus vitae felis pharetra condimentum. Proin consectetur non sem posuere semper. Ut consectetur nec sem quis tincidunt. Etiam pellentesque tristique accumsan. In elementum dapibus hendrerit. Sed sed mi nunc. Suspendisse enim nisi, pulvinar sed mattis ut, feugiat a arcu. Cras eleifend euismod diam vitae suscipit. Cras id nibh ligula. Phasellus sit amet dolor a nisi euismod pulvinar. Proin quis venenatis orci. Morbi non lectus augue. Donec iaculis lectus eu fringilla elementum. Donec aliquet odio vitae semper tristique.
+                        </p>
+                        <div class="pick_control">
+                            <img src="./images/bookcovers/11.jpg" alt="" />
+                            <p><span class="txtbold">책 제목</span> · 저자</p>
+                            <button>따봉</button>
+                            <button>나의 서재로</button>
+                        </div>
+                    </article>
+                    <!-- 4 -->
+                </div>
+            </section> <!-- secProReview -->
+
+            <div id="bannerSponsor">
+                <a href="#">스폰서 배너</a>
+            </div> <!-- bannerSponsor -->
+
+            <section id="secGenre" box-type="content">
+                <h2 class="secTitle int_wrap txtbold">TempUser 님을 위한 추천 장르 - 스릴러</h2>
+                <div class="slide-list int_wrap">
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/01.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 1 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/02.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 2 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/03.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 3 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/04.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 4 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/05.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 5 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/06.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 6 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/07.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 7 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/08.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 8 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/09.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 9 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/10.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 10 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/11.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 11 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/12.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 12 -->
+                </div>
+            </section> <!-- secGenre - 1st -->
+
+            <section id="secGenre" box-type="content">
+                <h2 class="secTitle int_wrap txtbold">TempUser 님을 위한 추천 장르 - 판타지</h2>
+                <div class="slide-list int_wrap">
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/11.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 1 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/12.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 2 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/13.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 3 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/14.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 4 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/15.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 5 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/16.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 6 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/17.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 7 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/18.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 8 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/19.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 9 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/20.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 10 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/01.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 11 -->
+                    <article class="item_single">
+                        <div class="single_int">
+                            <a href="#"><img class="single_cover" src="./images/bookcovers/02.jpg" alt="컨텐츠 표지" /></a>
+                            <dl class="single_desc">
+                                <dt class="singledesc_title txtbold">
+                                    제목
+                                </dt>
+                                <dd class="singledesc_desc">
+                                    저자 · 연도
+                                </dd>
+                            </dl>
+                            <p class="single_info">
+                                <span>✒ 관련 리뷰 n개</span>
+                                <span>★ 평균 별점 n점</span>
+                            </p>
+                            <div class="single_buttons">
+                                <button class="single_more">더 보기</button>
+                                <button class="single_add">나의 서재로</button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 12 -->
+                </div>
+            </section> <!-- secGenre - 2nd -->
+
+            <section id="secCollection" box-type="content">
+                <h2 class="secTitle int_wrap txtbold">모글 추천 컬렉션</h2>
+                <div class="int_wrap">
+                    <article class="collection_windows">
+                        <a href="#">
+                            <div class="collection_items">
+                                <img src="./images/bookcovers/01.jpg" alt="" />
+                                <img src="./images/bookcovers/02.jpg" alt="" />
+                                <img src="./images/bookcovers/03.jpg" alt="" />
+                                <img src="./images/bookcovers/04.jpg" alt="" />
+                                <img src="./images/bookcovers/05.jpg" alt="" />
+                                <img src="./images/bookcovers/06.jpg" alt="" />
+                            </div>
+                            <dl class="collection_owner">
+                                <img src="./images/faces/f07.jpg" alt="" />
+                                <dt class="txtbold">
+                                    "컬렉션 제목"
+                                </dt>
+                                <dd>
+                                    컬렉션 사용자<span> · 총 256개의 작품</span>
+                                </dd>
+                            </dl>
+                        </a>
+                    </article>
+                    <!-- 1 -->
+                    <article class="collection_windows">
+                        <a href="#">
+                            <div class="collection_items">
+                                <img src="./images/bookcovers/01.jpg" alt="" />
+                                <img src="./images/bookcovers/02.jpg" alt="" />
+                                <img src="./images/bookcovers/03.jpg" alt="" />
+                                <img src="./images/bookcovers/04.jpg" alt="" />
+                                <img src="./images/bookcovers/05.jpg" alt="" />
+                                <img src="./images/bookcovers/06.jpg" alt="" />
+                            </div>
+                            <dl class="collection_owner">
+                                <img src="./images/faces/f04.jpg" alt="" />
+                                <dt class="txtbold">
+                                    "컬렉션 제목"
+                                </dt>
+                                <dd>
+                                    컬렉션 사용자<span> · 총 256개의 작품</span>
+                                </dd>
+                            </dl>
+                        </a>
+                    </article>
+                    <!-- 2 -->
+                    <article class="collection_windows">
+                        <a href="#">
+                            <div class="collection_items">
+                                <img src="./images/bookcovers/01.jpg" alt="" />
+                                <img src="./images/bookcovers/02.jpg" alt="" />
+                                <img src="./images/bookcovers/03.jpg" alt="" />
+                                <img src="./images/bookcovers/04.jpg" alt="" />
+                                <img src="./images/bookcovers/05.jpg" alt="" />
+                                <img src="./images/bookcovers/06.jpg" alt="" />
+                            </div>
+                            <dl class="collection_owner">
+                                <img src="./images/faces/f02.jpg" alt="" />
+                                <dt class="txtbold">
+                                    "컬렉션 제목"
+                                </dt>
+                                <dd>
+                                    컬렉션 사용자<span> · 총 256개의 작품</span>
+                                </dd>
+                            </dl>
+                        </a>
+                    </article>
+                    <!-- 3 -->
+                    <article class="collection_windows">
+                        <a href="#">
+                            <div class="collection_items">
+                                <img src="./images/bookcovers/01.jpg" alt="" />
+                                <img src="./images/bookcovers/02.jpg" alt="" />
+                                <img src="./images/bookcovers/03.jpg" alt="" />
+                                <img src="./images/bookcovers/04.jpg" alt="" />
+                                <img src="./images/bookcovers/05.jpg" alt="" />
+                                <img src="./images/bookcovers/06.jpg" alt="" />
+                            </div>
+                            <dl class="collection_owner">
+                                <img src="./images/faces/f08.jpg" alt="" />
+                                <dt class="txtbold">
+                                    "컬렉션 제목"
+                                </dt>
+                                <dd>
+                                    컬렉션 사용자<span> · 총 256개의 작품</span>
+                                </dd>
+                            </dl>
+                        </a>
+                    </article>
+                    <!-- 4 -->
+                </div>
+            </section> <!-- secCollection -->
+
+    <!-- Page Main Contents End -->
+
+            <p id="rvCount">지금까지 <span class="count_item txtenbold">1,234,567</span> 개의 작품에 대한 <span class="count_review txtenbold">67,891,011</span> 개의 리뷰가 작성되었습니다.</p>
+            <footer id="footBase" class="foot_index">
+                <div class="int_wrap">
+                    <div id="footLinks">
+                        <a href="#">이용약관</a>
+                        <hr class="vf" />
+                        <a class="txtbold" href="#">개인정보 처리방침</a>
+                        <hr class="vf" />
+                        <a href="#">이메일 주소 무단수집 거부</a>
+                        <hr class="vf" />
+                        <a href="#">서비스 정보</a>
+                        <div id="snsIcons">
+                            <p>아</p>
+                            <p>이</p>
+                            <p>콘</p>
+                        </div>
+                    </div>
+                    <p>주식회사 모글 · 대표자 김창완</p>
+                    <p>고객센터 · 1544-5555 | <a class="txtenlight" href="mailto:dsc0320@mogle.kr">dsc0320@mogle.kr</a></p>
+                    <address>부산광역시 부산진구 성지곡로 12번길 29</address>
+                    <p>사업자 등록번호 · 2021-부산초읍-25515</p>
+                    <div id="footCopy">
+                        <h1 class="logo scr_alt"><a href="./index.html" target="_self">Mogle</a></h1>
+                        <p class="txtenlight">ⓒ All Rights Reserved.</p>
+                    </div>
+                </div>
+            </footer> <!-- Footer -->
+        </div> <!-- #wrap -->
+    </body>
+</html>

@@ -1,0 +1,25 @@
+/* ---------- CWK Animation Keyframes CSS Ver. 202101 ---------- */
+
+@keyframes fromright {
+    from {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes frombottom {
+    from {
+        transform: translateY(50%);
+        opacity: .3;
+    }
+
+    to {
+        transform: translateY(20%);
+        opacity: 1;
+    }
+}

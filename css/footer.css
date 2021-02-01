@@ -1,0 +1,70 @@
+/* ---------- CWK Footer CSS Ver. 202101 ---------- */
+
+/* ---------- 푸터 영역 시작 ---------- */
+
+p#rvCount {
+    padding: 1rem 0;
+    width: 100%;
+    background: rgba(255, 255, 255, .5);
+    font-size: .7rem;
+    color: #2f4946;
+    text-align: center;
+}
+
+span.count_item,
+span.count_review {
+    color: rgba(25, 214, 120, 1);
+}
+
+footer#footBase {
+    padding-bottom: 3rem;
+    background: #3d3d3d;
+    font-size: .6rem;
+    color: rgba(255, 255, 255, .6);
+    line-height: 1rem;
+}
+
+footer#footBase a:hover {
+    text-decoration: underline solid;
+}
+
+div#footLinks {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+div#footLinks > * {
+    display: block;
+    margin: auto 0;
+}
+
+div#footLinks > hr.vf {
+    height: .5rem;
+    background: rgba(255, 255, 255, .6);
+}
+
+div#snsIcons {
+    display: flex;
+    gap: .75rem;
+    margin-left: auto;
+}
+
+div#footCopy {
+    display: flex;
+    align-content: center;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+
+div#footCopy > * {
+    margin: auto 0;
+}
+
+div#footCopy > h1.logo {
+    width: 3.05rem;
+    height: 1rem;
+    opacity: .6;
+}
+
+/* ---------- 푸터 영역 종료 ---------- */

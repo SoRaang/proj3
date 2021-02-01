@@ -1,0 +1,134 @@
+/* ---------- CWK Carousel (Slide) Layout CSS Ver. 202101 ---------- */
+
+section#slideIndex .slick-active img.mainslide-img {
+    animation: frombottom 1s ease-out 0s 1 normal forwards;
+}
+
+section#slideIndex .slick-active dt.itemdesc_title {
+    animation: fromright 1s ease-out .1s 1 normal forwards;
+}
+
+section#slideIndex .slick-active dd.itemdesc_desc {
+    animation: fromright 1s ease-out .4s 1 normal forwards;
+}
+
+section#slideIndex .slick-active dd.itemdesc_star {
+    animation: fromright .7s ease-out .8s 1 normal forwards;
+}
+
+section#slideIndex .slick-dots {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: .75rem;
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    height: 100%;
+    color: #fff;
+    z-index: 2;
+}
+
+section#slideIndex .slick-dots button {
+    width: .25rem;
+    height: 2.5rem;
+    border-radius: .1rem;
+    background: #fff;
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
+    outline: none;
+    text-indent: -500000rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+section#slideIndex .slick-dots > li.slick-active button {
+    background: rgba(25, 214, 120, 1);
+    box-shadow: 0 0 0 .15rem rgba(25, 214, 120, .25);
+}
+
+/* ---------- Normal List ---------- */
+
+.slick-list {
+    overflow: visible;
+}
+
+.slick-list [aria-hidden="true"] {
+    opacity: .0;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.slide-list .slick-arrow {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.slide-list .slick-prev,
+.slide-list .slick-next {
+    top: 0;
+    width: 4rem;
+    height: 12rem;
+    text-indent: -500000rem;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.slide-list .slick-prev:active,
+.slide-list .slick-next:active {
+    transform: scale(.9);
+}
+
+.slide-list .slick-prev {
+    right: calc(100% + .5rem);
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    background: linear-gradient(270deg, rgba(0, 0, 0, .3) 0%, rgba(0, 0, 0, 0));
+}
+
+.slide-list .slick-next {
+    left: calc(100% + .5rem);
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .3) 0%, rgba(0, 0, 0, 0));
+}
+
+.slick-disabled {
+    opacity: 0;
+}
+
+.slide-list .slick-prev::before,
+.slide-list .slick-prev::after,
+.slide-list .slick-next::before,
+.slide-list .slick-next::after {
+    display: block;
+    position: absolute;
+    top: calc(50% - .2rem);
+    width: 75%;
+    height: .4rem;
+    border-radius: .15rem;
+    background: #fff;
+    content: '';
+}
+
+.slide-list .slick-prev::before,
+.slide-list .slick-prev::after {
+    left: 20%;
+    transform-origin: calc(0% + .2rem) 50%;
+}
+
+.slide-list .slick-next::before,
+.slide-list .slick-next::after {
+    right: 20%;
+    transform-origin: calc(100% - .2rem) 50%;
+}
+
+.slide-list .slick-prev::before,
+.slide-list .slick-next::after {
+    transform: rotate(45deg);
+}
+
+.slide-list .slick-prev::after,
+.slide-list .slick-next::before {
+    transform: rotate(-45deg);
+}

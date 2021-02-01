@@ -1,0 +1,283 @@
+/* ---------- CWK Board Layout CSS Ver. 202101 ---------- */
+
+/* ---------- 영역 공통 선언 시작 ---------- */
+
+body {
+    background: #e2e2e2;
+}
+
+header#headBase.head_my {
+    position: absolute;
+    top: 0;
+}
+
+section#subMainArea {
+    padding: 5rem .5rem;
+    min-height: 100vh;
+    border-left: .05rem solid rgba(0, 0, 0, .05);
+    border-right: .05rem solid rgba(0, 0, 0, .05);
+    background: #fff;
+    font-size: .7rem;
+    transition: .3s;
+}
+
+section#subMainArea.board_container::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+/* ---------- 영역 공통 선언 종료 ---------- */
+/* ---------- 게시판 영역 시작 ---------- */
+
+.board_list {
+    float: right;
+    width: 80%;
+    text-align: center;
+}
+
+.board_cp_container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    gap: .5rem;
+    margin: .5rem 0;
+    width: 100%;
+}
+
+.board_cp_container > * {
+    display: flex;
+    gap: .25rem;
+    padding: .5rem .75rem;
+    border-radius: .15rem;
+    font-size: .6rem;
+}
+
+.board_cp_title {
+    margin-right: auto;
+    background: tomato;
+    color: #fff;
+}
+
+.board_cp_count {
+    background: rgba(0, 0, 0, .1);
+}
+
+.board_cp_admin {
+    background: gold;
+    color: rgba(255, 0, 0, .5);
+}
+
+.board_cp_write {
+    background: royalblue;
+    color: rgba(255, 255, 255, .7);
+}
+
+.tl_header {
+    border-bottom: .05rem solid rgba(0, 0, 0, .1);
+}
+
+.tl_header > tr {
+    height: 2rem;
+}
+
+.tl_colname {
+    background: rgba(0, 0, 0, .1);
+}
+
+.tl_list > tr {
+    font-size: .6rem;
+}
+
+.tl_list > tr:nth-child(even) {
+    background: rgba(0, 0, 0, .05);
+}
+
+.tl_list > tr:hover {
+    background: rgba(116, 173, 142, .5);
+    font-weight: bold;
+}
+
+.tl_pager {
+    border-top: .05rem solid rgba(0, 0, 0, .1);
+}
+
+.tl_checker {
+    width: 1.5rem;
+}
+
+.tl_num {
+    width: 3rem;
+}
+
+.tl_title {
+    width: auto;
+}
+
+.tl_date {
+    width: 5rem;
+}
+
+.tl_author {
+    width: 5rem;
+}
+
+.tl_view {
+    width: 3rem;
+}
+
+.tl_like {
+    width: 3rem;
+}
+
+.col_title {
+    font-size: .7rem;
+    text-align: left;
+}
+
+.tl_title_text {
+    padding: .75rem .25rem;
+}
+
+.col_author > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    gap: .25rem;
+    padding: 0 .25rem;
+    width: 100%;
+    height: 100%;
+    font-size: .6rem;
+}
+
+.col_author > div > * {
+    display: block;
+    margin: auto 0;
+}
+
+.col_author > div > img {
+    aspect-ratio: 1 / 1;
+    width: 1.2rem;
+    border-radius: 50%;
+}
+
+.tl_pager_container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    gap: .5rem;
+    width: 100%;
+    padding: .25rem 0;
+}
+
+.tl_pager_container > * {
+    position: relative;
+    margin: auto 0;
+    padding: .25rem .5rem;
+    border-radius: .15rem;
+    background: rgba(0, 0, 0, .1);
+    font-size: .6rem;
+    color: rgba(0, 0, 0, .4);
+}
+
+.tl_pager_prev::before,
+.tl_pager_next::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 1rem;
+    height: 100%;
+    border: .5rem solid transparent;
+    border-radius: 0;
+    box-sizing: border-box;
+    content: '';
+}
+
+.tl_pager_prev {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.tl_pager_prev::before {
+    right: 100%;
+    border-right: .5rem solid rgba(0, 0, 0, .1);
+}
+
+.tl_pager_next {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.tl_pager_next::after {
+    left: 100%;
+    border-left: .5rem solid rgba(0, 0, 0, .1);
+}
+
+.tl_pager_now {
+    background: royalblue;
+    color: rgba(255, 255, 255, .7);
+}
+
+.tl_pager_elapse {
+    background: none;
+    pointer-events: none;
+}
+
+form#frmBoardSearch {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: .15rem;
+    padding: 1rem;
+}
+
+.bsearch_option,
+.bsearch_text,
+.bsearch_submit {
+    padding: .25rem .5rem;
+    border: .05rem solid rgba(0, 0, 0, .1);
+    border-radius: .15rem;
+}
+
+/* ---------- 게시판 영역 종료 ---------- */
+/* ---------- 게시판 사이드바 시작 ---------- */
+
+aside#boardSideBar {
+    float: left;
+    margin-bottom: 2rem;
+    width: calc(20% - 1.5rem);
+    box-sizing: border-box;
+}
+
+aside#boardSideBar > ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .5rem;
+}
+
+aside#boardSideBar > ul > * {
+    border-radius: .15rem;
+    background: rgba(0, 0, 0, .05);
+    transition: .3s;
+}
+
+aside#boardSideBar > ul > * > a {
+    display: block;
+    padding: .75rem .25rem;
+    width: 100%;
+    height: 100%;
+}
+
+aside#boardSideBar > ul > *:hover {
+    box-shadow: 0 0 0 .1rem rgba(0, 0, 0, .2);
+}
+
+aside#boardSideBar > ul > li.checked {
+    background: rgba(0, 0, 0, .2);
+    pointer-events: none;
+}
+
+/* ---------- 게시판 사이드바 종료 ---------- */

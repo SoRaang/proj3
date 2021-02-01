@@ -1,0 +1,81 @@
+/* ---------- CWK Media Query CSS Ver. 202101 ---------- */
+
+@media screen and (max-width: 960px) {
+    article.item_single.slick-active:nth-of-type(4n+1):hover > div.single_int {
+        left: 0;
+    }
+    
+    article.item_single.slick-active:nth-of-type(4n):hover > div.single_int {
+        left: -40%;
+    }
+
+    article.mogle_pick {
+        flex: 1 1 100%;
+    }
+
+    section#secCollection > div.int_wrap {
+        flex-flow: row wrap !important;
+    }
+
+    form#frmHSearch {
+        display: none;
+    }
+
+    article.collection_windows {
+        width: calc(50% - .5rem);
+    }
+
+    div.collection_items > * {
+        height: 7rem;
+    }
+
+    .board_list,
+    .board_view {
+        width: 100%;
+    }
+
+    aside#boardSideBar {
+        width: 100%;
+    }
+
+    aside#boardSideBar > ul {
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+    }
+
+    div#subAddition > * {
+        flex: 1 1 100%;
+    }
+
+    div#subCollection {
+        flex-flow: row wrap;
+    }
+
+    
+    div#subCollection > * {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    header#headBase {
+        margin-top: -100%;
+    }
+
+    nav#navMobile {
+        bottom: 0;
+    }
+
+    div#subContentBG {
+        height: 12rem;
+    }
+
+    section#subMainArea.board_container {
+        padding-top: 1rem;
+    }
+
+    footer#footBase {
+        margin-bottom: 2.5rem;
+    }
+}
